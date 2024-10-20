@@ -1,0 +1,196 @@
+.node {
+    width: 25px;
+	  /* margin: 1px 2px; */
+	  height: 24px;
+	  /* box-shadow: inset 0px -2px 3px 1px #3e2d2d80; */
+	  outline: 0.1px solid rgb(223 220 220 / 47%);
+	  /* display: inline-block; */
+	  background: #ffffff;
+	  /* border-radius: 2px; */
+  }
+  
+  .node-finish {
+    background-image:url(genderless-solid.svg);
+    /*background-color: rgb(255, 254, 106);*/
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    animation-name: nodeAnimation;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-delay: 0;
+    animation-direction: alternate;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+  }
+  
+  .node-start {
+    background-image:url(play-solid.svg) !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    animation-name: nodeAnimation;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-delay: 0;
+    animation-direction: alternate;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+  } 
+
+  .node-via {
+    background-image:url(via.svg) !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    animation-name: nodeAnimation;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-delay: 0;
+    animation-direction: alternate;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+  }
+
+
+  .node-visited-start{
+    background-color: rgb(255, 254, 106) !important;
+  }
+
+  .node-visited {
+    animation-name: visitedAnimation;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+    animation-delay: 0;
+    animation-direction: alternate;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+  }
+  
+  @keyframes visitedAnimation {
+    0% {
+      transform: scale(0.3);
+      background-color: rgba(240, 20, 12, 0.75);
+      border-radius: 100%;
+    }
+  
+    50% {
+      background-color: rgba(235, 69, 19, 0.75);
+    }
+  
+    75% {
+      transform: scale(1.2);
+      background-color: rgba(235, 69, 19, 0.45);
+    }
+  
+    100% {
+      transform: scale(1);
+      background-color: rgba(235, 69, 19, 0.45);
+    }
+  }
+  
+  
+  
+  .node-shortest-path {
+    animation-name: shortestPath;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+    animation-delay: 0;
+    animation-direction: alternate;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+  }
+
+
+  
+  @keyframes shortestPath {
+    0% {
+      transform: scale(0.6);
+      background-color: orange;
+    }
+  
+    50% {
+      transform: scale(1.2);
+      background-color: orange;
+    }
+  
+    100% {
+      transform: scale(1);
+      background-color: orangered;
+    }
+  } 
+
+  .node-wall{
+    /* background-image:url(wall.jpg) !important; */
+    background-color: rgb(41 63 119);
+    background-position-y: top;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation-name: wallAnimation;
+    animation-duration: 0.1s;
+    animation-timing-function: ease-out;
+    animation-delay: 0;
+    animation-direction: alternate;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+    outline: 0px solid rgb(175, 216, 248) !important;
+  }
+  
+  @keyframes wallAnimation {
+    0% {
+      transform: scale(.3);
+    }
+  
+    50% {
+      transform: scale(1.2);
+    }
+  
+    100% {
+      transform: scale(1.0);
+    }
+  }
+
+  @keyframes nodeAnimation {
+    0% {
+      transform: scale(.3);
+    }
+  
+    50% {
+      transform: scale(1.2);
+    }
+  
+    100% {
+      transform: scale(1.0);
+    }
+  }
+
+  .node-visited-via {
+    background-color: yellow !important;
+    background-image:url(via.svg) !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .node-visited-start {
+    background-color: orangered !important;
+    background-image:url(play-solid.svg) !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .node-visited-finish {
+    background-color: orangered !important;
+    background-image:url(genderless-solid.svg) !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }

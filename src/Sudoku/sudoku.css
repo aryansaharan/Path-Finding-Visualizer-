@@ -1,0 +1,91 @@
+.sudoku-cell{
+    padding:15px;
+    color:black;
+    font-weight:600;
+    outline: 1px solid rgb(53, 49, 49);
+    /* display: inline-block; */
+    margin-bottom:1px;
+    margin-right:1px;
+    width: 50px;
+    height: 50px;
+}
+
+.sudoku-grid{
+    margin:auto;
+    margin-top:50px;
+    margin-left:30%;
+    margin-bottom:50px;
+    
+}
+
+
+.rowcell{
+    border-top:3px solid rgb(53, 49, 49);
+    border-left:3px solid rgb(53, 49, 49);
+}
+
+.row{
+    border-top:3px solid rgb(53, 49, 49) !important;
+}
+
+.cell{
+    border-left:3px solid rgb(53, 49, 49);
+}
+
+.crcc{
+    border-bottom:3px solid rgb(53, 49, 49);
+    border-right:3px solid rgb(53, 49, 49);
+}
+
+.cc{
+    border-right:3px solid rgb(53, 49, 49);
+}
+
+.cr{
+    border-bottom:3px solid rgb(53, 49, 49);
+}
+
+.rowright{
+    border-right:3px solid rgb(53, 49, 49);
+    border-top:3px solid rgb(53, 49, 49);
+}
+
+.bottomcell {
+    border-bottom:3px solid rgb(53, 49, 49);
+    border-left:3px solid rgb(53, 49, 49);
+}
+
+.completed {
+    animation-name: sudokuAnimation;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+    animation-delay: 0;
+    animation-direction: alternate;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+  }
+  
+  @keyframes sudokuAnimation {
+    0% {
+      transform: scale(0.3);
+      background-color: rgba(177, 231, 133, 0.75);
+      border-radius: 100%;
+      color:black;
+    }
+  
+    50% {
+      background-color: rgba(140, 228, 99, 0.75);
+    }
+  
+    75% {
+      transform: scale(1.2);
+      background-color: rgba(126, 238, 81, 0.45);
+    }
+  
+    100% {
+      transform: scale(1);
+      background-color: rgb(109, 241, 109);
+      color:rgb(44, 43, 43);
+    }
+  }

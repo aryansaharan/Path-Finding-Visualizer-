@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const R = 20;
+    const C = 50;
+    var grid = new Array(R);
+    var elem = [];
+    var edge = [];
+    var DENSITY = 7; // No of nodes in graph
+
+    function random(n) {
+        return Math.floor(Math.random() * n);
+    }
+
+    function goodRandom(x, y) {
+        let flag = true;
+        for (let i=-4; i<5; i++) {
+            for (let j=-4; j<5; j++) {
+                let r = (x + i) % 19;
+                let c = (y + j) % 49;
+                if (x + i < 0) r *= -1;
+                if (y + j < 0) c *= -1;
+                if (grid[r][c] > 0) flag = false;
+            }
+        }
+        return flag;
+    }
+
+    for(let i=0; i<R; i++) grid[i] = new Array(C);
+
+    while(DENSITY -- ) {
+        let x = random(19);
+        let y = random(49);
+        if (goodRandom(x, y)) {
+            grid[x][y] = random(19);
+            elem.push([x, y]);
+        }
+        else {
+            DENSITY ++;
+        }
+    }
+
+    let k = 4; // No of edges
+    while(k--) {
+        let r = Math.floor(Math.random() * elem.length) % 23;
+        let c = Math.floor(Math.random() * elem.length) % 23;
+        if(r == c)
+            k++;
+        else { 
+            edge.push([elem[r][0], elem[r][1], elem[c][0], elem[c][1]]);
+        }
+    }
+
+	console.log(grid)
+</script>
+</html>

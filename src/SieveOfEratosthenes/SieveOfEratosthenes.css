@@ -1,0 +1,14 @@
+.cell-soe{
+    padding:5px;
+    color:black;
+    background: wheat;
+    display: inline-block;  
+    margin-bottom:1px;
+    margin-right:1px;
+    width: 35px;
+    height: 35px;
+}
+
+.soe-grid{
+    margin-top:30px;
+}
